@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>search</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    
+    
+      
+    <style>
+      .search {
+        padding: 10px;
+        display: flex;
+      }
+
+      .inp {
+        font-size: 18px;
+      }
+
+      .bt {
+        font-size: 18px;
+        border-radius: 4px;
+        background-color: rgb(93, 155, 255);
+        color: white;
+        border-color: #fdd6ed;
+      }
+    </style>
+  </head>
+
+  <body class=" ">
+    <div class="search">
+      <form action="ret.php" method="POST">
+        <div class="row">
+          <div class="col-md-5">
+            <label for="sp" class="form-label"></label>
+            <select class="form-select" id="dropdown" name="sp" required>
+              <option value="">Specialized In</option>
+              <option value="cardiologist">Cardiogist</option>
+              <option value="nephrologist">nephrologist</option>
+              <option value="neurologist">neurologist</option>
+              <option value="ENT">ENT</option>
+              <option value="gynecologist">gynecologist</option>
+              <option value="orthopedist">orthopedist</option>
+              <option value="gastroenterologist">gastroenterologist</option>
+              <option value="pediatrician">pediatrician</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid option.
+            </div>
+          </div>
+          <div class="col-md-5">
+            <label for="city" class="form-label"></label>
+            <select class="form-select" id="country" name="city" required>
+              <option value="">City</option>
+              <option value="vijaywada">vijaywada</option>
+              <option value="guntur">guntur</option>
+              <option value="gudivada">gudivada</option>
+              <option value="ongole">ongole</option>
+              <option value="nellore">nellore</option>
+              <option value="kadapa">kadapa</option>
+              <option value="bapatla">bapatla</option>
+              <option value="mtm">mtm</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid option.
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label></label> <!-- Empty label for spacing -->
+            <div>
+              <button id="submitButton" class="bt" type="submit" value="search" onclick="submitForm()">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <script>
+        function submitForm() {
+          var name = document.getElementsByName('city')[0].value;
+          var email = document.getElementsByName('sp')[0].value;
+    
+          // Store the values in local storage
+          localStorage.setItem('city', city);
+          localStorage.setItem('sp', sp);
+    
+          // Redirect to the destination HTML document
+          window.location.href = 'search2.html';
+        }
+      </script>
+
+  </div>
+  </body>
+</html>

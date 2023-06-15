@@ -1,0 +1,228 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+      <meta name="generator" content="Hugo 0.84.0">
+      <title>Registration</title>
+
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+      
+
+      <!-- Bootstrap core CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+    
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      
+      </style>
+
+      
+      <!-- Custom styles for this template -->
+      <link href="form-validation.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+      
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+          <img class="mb-4" src="https://img.freepik.com/free-vector/flat-medical-symbol_23-2149496593.jpg?w=740&t=st=1684085323~exp=1684085923~hmac=d44800c1822374c1fa74d7cbc10b909d6898c538dcec4c4dd452595ca3241779" alt="" width="72" height="65">
+          <h2>Registration form</h2>
+        <p class="lead">"Register now and gain access to quality healthcare services at your fingertips!" <br> our team will moniter you every second when you get in touch with us.</p>
+      </div>
+      <form action="docreg.php" method="POST"  enctype="multipart/form-data">
+
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Hello DOC!</span>
+          </h4>
+          <div id="">
+              <img src="https://img.freepik.com/free-psd/healthcare-consultant-banner-square-flyer-social-media-post-template_202595-576.jpg?w=740&t=st=1684131850~exp=1684132450~hmac=4890c9234fb048f0fc68c05a42ed08335da36af5e719085e771bf038166a87b3" alt="" width="100%" height="425">
+            </div>
+          
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Details</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" name="fname" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" name="lname" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="username" class="form-label">Username<span class="text-muted">(Optional)</span></label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" id="username" placeholder="Username">
+                <div class="invalid-feedback">
+                    Your username is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email.
+                </div>
+              </div>
+              <div class="col-7">
+                <label for="password" class="form-label">set a password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="invalid-feedback">
+                  
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                  <label for="city" class="form-label">City/Town<span class="text-muted">(use all small letters)</span> </label>
+                  <input class="form-control" id="city" name="city" required>
+                  <div class="invalid-feedback">
+                    Please select a valid option.
+                  </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="address2" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" id="address2" name="num" placeholder="+91" required>
+                <div class="invalid-feedback">
+                  Please enter your Mobile Number.
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>India</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required>
+                  <option value="">Choose...</option>
+                  <option>Andhra Pradesh</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="image" class="form-label">Upload DP</label>
+                <input type="file" class="form-control" id="image" name="image"  required>
+                <div class="invalid-feedback">
+                  image  required.
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            
+
+            <h4 class="mb-3">Professional Details</h4>
+
+        
+            <div class="row gy-3">
+              <div class="col-md-6">
+                  <label for="sp" class="form-label">Specialized In</label>
+                  <select class="form-select" id="country" name="sp" required>
+                      <option value="cardiologist">Cardiogist</option>
+                      <option value="nephrologist">nephrologist</option>
+                      <option value="neurologist">neurologist</option>
+                      <option value="ENT">ENT</option>
+                      <option value="gynecologist">gynecologist</option>
+                      <option value="orthopedist">orthopedist</option>
+                      <option value="gastroenterologist">gastroenterologist</option>
+                      <option value="pediatrician">pediatrician</option>
+                      <option value="others">others</option>
+
+                    </select>
+                  <div class="invalid-feedback">
+                    Please select a valid option.
+                  </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="cc-number" class="form-label">Id number<span class="text-muted">(Any 5 digit number)</span></label>
+                <input type="text" class="form-control" id="cc-number" name="id" placeholder="">
+              
+              </div>
+
+              <div class="col-12">
+                <label for="services" class="form-label">Tell us about you<span class="text-muted">(services)</span></label>
+                <input type="text" class="form-control" id="services" name="services" placeholder="" required>
+                <div class="invalid-feedback">
+                Enter your services.
+                </div>
+            </div>
+
+              <div class="col-12">
+                  <label for="address" class="form-label"> Work Address</label>
+                  <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" required>
+                  <div class="invalid-feedback">
+                    Please enter your address.
+                  </div>
+              </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit" value="register">Submit</button>
+          </form>
+        </div>
+      </div>
+    </form>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2022–2023 Hello DOC!</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="form-validation.js"></script>
+    </body>
+  </html>
